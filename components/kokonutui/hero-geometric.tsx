@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -86,15 +86,15 @@ export default function HeroGeometric({
   title1?: string
   title2?: string
 }) {
-  const fadeUpVariants = {
+  const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
         delay: 0.5 + i * 0.2,
-        ease: [0.25, 0.4, 0.25, 1],
+        ease: [0.25, 0.4, 0.25, 1.0]
       },
     }),
   }
@@ -180,7 +180,7 @@ export default function HeroGeometric({
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              We help you bring your AI ideas to life—faster, smarter, and bolder. At KDB, we fuse creativity with code to craft intelligent solutions tailored to your goals. From prototypes to production-ready systems, we’re your partner in building the future of AI.
+              We help you bring your AI ideas to life—faster, smarter, and bolder. At KDB, we fuse creativity with code to craft intelligent solutions tailored to your goals. From prototypes to production-ready systems, we're your partner in building the future of AI.
             </p>
           </motion.div>
         </div>
