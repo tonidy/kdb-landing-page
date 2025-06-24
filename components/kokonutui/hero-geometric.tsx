@@ -78,7 +78,7 @@ function ElegantShape({
 }
 
 export default function HeroGeometric({
-  badge = "KDB - Kecerdasan Dibuat Buat",
+  badge = "KDB - PT Kecerdasan Dibuat Buat",
   title1 = "Unleash Your",
   title2 = "Intelligent Future",
 }: {
